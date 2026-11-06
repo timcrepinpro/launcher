@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/stores", "crates/platform", "crates/ui", "app"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+license = "À choisir (voir docs/adr/0002-licence.md)"
+
+[workspace.dependencies]
+launcher-core = { path = "crates/core" }
+launcher-stores = { path = "crates/stores" }
+launcher-platform = { path = "crates/platform" }
+launcher-ui = { path = "crates/ui" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

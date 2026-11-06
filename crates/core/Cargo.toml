@@ -1,0 +1,11 @@
+[package]
+name = "launcher-core"
+description = "Domaine pur du launcher : jeux, boutiques, actions de lancement. Aucune entrée/sortie."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+
+[lints]
+workspace = true

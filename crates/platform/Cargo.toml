@@ -1,0 +1,16 @@
+[package]
+name = "launcher-platform"
+description = "Tout ce qui dépend du système : registre, chemins, ouverture de protocoles, processus."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+launcher-core.workspace = true
+thiserror.workspace = true
+open = "5"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"
+
+[lints]
+workspace = true

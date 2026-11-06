@@ -1,0 +1,15 @@
+[package]
+name = "launcher-stores"
+description = "Un module par boutique : détection du client, jeux installés, commande de lancement."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+launcher-core.workspace = true
+launcher-platform.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true
